@@ -1,10 +1,18 @@
+<?php
+
+    session_start();
+
+    if(isset($_SESSION['usuario'])){
+        header("location: bienvinida.php");
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO LO LIST</title>
+    <title>TO DO LIST</title>
     
     <link rel="stylesheet" href="assets/css/stylo.css">
 </head>
@@ -28,7 +36,7 @@
                 <!--Formulario-->
                 <div class="contenedor__login-register">
                     <!--Login-->
-                    <form action="" class="formulario__login">
+                    <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
                         <h2>Iniciar Sesión</h2>
                         <input type="text" placeholder="Correo Electronico" >
                         <input type="password" placeholder="Contraseña">
