@@ -3,7 +3,7 @@
     session_start();
 
     if(isset($_SESSION['usuario'])){
-        header("location: bienvinida.php");
+        header("location: todolist.php");
     }
 ?>
 
@@ -23,7 +23,7 @@
                 <div class="caja__trasera">
                     <div class="caja__trasera-login">
                         <h3>¿Ya tienes una cuenta?</h3>
-                        <p>Inicia sesión para entrar en la página</p>
+                        <p>Iniciar sesión para ingresar</p>
                         <button id="btn__iniciar-sesion">Iniciar Sesión</button>
                     </div>
                     <div class="caja__trasera-register">
@@ -38,9 +38,9 @@
                     <!--Login-->
                     <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
                         <h2>Iniciar Sesión</h2>
-                        <input type="text" placeholder="Correo Electronico" >
-                        <input type="password" placeholder="Contraseña">
-                        <button>Entrar</button>
+                        <input type="text" placeholder="Correo Electronico" name="correo" >
+                        <input type="password" placeholder="Contraseña" name="contrasena">
+                        <button>Ingresar</button>
                     </form>
 
                     <!--Register-->

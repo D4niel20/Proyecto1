@@ -5,9 +5,7 @@ include 'conexion_be.php';
     $correo = $_POST['correo'];
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
-    //encriptar la contraseña
-    $contrasena = hash('sha512',$contrasena);
-
+    
     $query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena)
             VALUES('$nombre_completo', '$correo', '$usuario', '$contrasena')";
     //verificar que el correo no se duplique en la base de datos
@@ -17,7 +15,7 @@ include 'conexion_be.php';
     echo'
         <script>
             alert("correo ya registrado, Ingrese otro correo");
-            window.loction = "../index.php";
+            window.location = "../index.php";
         </script>
     ';
     exit();
@@ -29,7 +27,7 @@ include 'conexion_be.php';
     echo'
         <script>
             alert("este usuario ya registrado, Ingrese otro usuario");
-            window.loction = "../index.php";
+            window.location = "../index.php";
         </script>
     ';
     exit();
