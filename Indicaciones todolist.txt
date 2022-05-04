@@ -1,0 +1,7 @@
+--**Indicaciones**--
+1.descargar la carpeta TOLIST
+2.para poder ejecutar mover la carpeta de TOLIST al disco donde tenga instalado 
+el XAMPP ejemplo D:\xampp\htdocs y después abrir en visual studio code.
+3.importar la base de datos que se encuentra en D:\xampp\htdocs\tolist\php 
+con el nombre de BD a http://localhost/phpmyadmin/
+4.para ejecutar ingresar en su navegador http://localhost/tolist/
